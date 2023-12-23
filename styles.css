@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(to bottom right, #000814, #001d3d, #003566);
+    color: #001d3d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.alarm {
+    background-color: #ffd60a;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+.datetime {
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.date,
+.time {
+    font-size: 18px;
+    margin-bottom: 10px;
+    transition: color 0.3s;
+}
+
+button, select {
+    outline: none;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #003566;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #001d3d;
+    transform: scale(1.1);
+}
+
+.setAlarm {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    animation: slideInLeft 1s ease-in-out;
+}
+
+.column {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.column select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ffc300;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.column select:hover {
+    border-color: #001d3d;
+}
+
+#alarm-h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.alarmList {
+    display: flex;
+    flex-direction: column;
+}
+
+.alarmLog {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #001d3d;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.btn-delete {
+    background-color: #cc0000;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-delete:hover {
+    background-color: #990000;
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
